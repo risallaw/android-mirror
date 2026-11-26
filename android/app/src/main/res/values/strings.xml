@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Mirror</string>
+    <string name="tagline">Show this screen on your Mac</string>
+
+    <string name="label_status">Status</string>
+    <string name="label_address">Connect from your Mac</string>
+
+    <string name="status_idle">Idle</string>
+    <string name="status_idle_detail">Tap Start mirroring to share this screen.</string>
+    <string name="status_starting">Starting…</string>
+    <string name="status_starting_detail">Setting up screen capture.</string>
+    <string name="status_waiting">Waiting for Mac</string>
+    <string name="status_waiting_detail">Ready for a connection on your network.</string>
+    <string name="status_no_wifi_detail">Connect this phone to the same Wi-Fi as your Mac.</string>
+    <string name="status_stopping">Stopping…</string>
+    <string name="status_stopping_detail">Ending the mirroring session.</string>
+    <string name="status_connecting">Connecting to %1$s</string>
+    <string name="status_connecting_detail">Starting the video stream.</string>
+    <string name="status_streaming">Streaming to %1$s</string>
+    <string name="status_streaming_detail">Your screen is visible on the Mac.</string>
+    <string name="status_error">Error</string>
+    <string name="status_error_detail">Something went wrong. Try starting again.</string>
+    <string name="detail_with_warning">%1$s\n⚠ %2$s</string>
+    <string name="unknown_client">Mac</string>
+    <string name="stream_info">%1$d × %2$d · %3$d fps</string>
+
+    <string name="address_hint">Open Android Mirror on your Mac and connect to this address.</string>
+    <string name="address_hint_idle">Start mirroring to get the address to connect to.</string>
+    <string name="address_hint_no_wifi">Mirroring needs Wi-Fi (or a hotspot) shared with your Mac.</string>
+    <string name="address_no_wifi">No Wi-Fi</string>
+    <string name="address_placeholder">—</string>
+    <string name="copied">Copied %1$s</string>
+
+    <string name="action_start_mirroring">Start mirroring</string>
+    <string name="action_stop_mirroring">Stop mirroring</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_stop">Stop</string>
+
+    <string name="consent_declined">Screen capture was not allowed.</string>
+    <string name="core_unavailable">Native core unavailable: %1$s</string>
+
+    <string name="error_foreground">Could not start the mirroring service.</string>
+    <string name="error_projection">Screen capture could not start. Try again.</string>
+    <string name="error_core">Could not open the network port for mirroring.</string>
+
+    <string name="notification_channel">Mirroring</string>
+    <string name="notification_channel_desc">Shown while this screen is being shared.</string>
+    <string name="notif_starting">Starting mirroring…</string>
+    <string name="notif_ready">Mirroring ready — %1$s</string>
+    <string name="notif_ready_text">Waiting for a Mac — open Android Mirror to see the pairing PIN</string>
+    <string name="notif_ready_no_wifi">Mirroring ready — no Wi-Fi</string>
+    <string name="notif_stopping">Stopping mirroring…</string>
+    <string name="notif_connecting">Connecting to %1$s</string>
+    <string name="notif_streaming">Streaming to %1$s</string>
+
+    <string name="label_pin">Pairing PIN</string>
+    <string name="pin_hint">Enter this PIN on your Mac to pair. It changes after every pairing. Paired Macs connect without it.</string>
+    <string name="pin_description">PIN %1$s</string>
+    <string name="pin_wrong">Wrong PIN from %1$s — %2$s</string>
+    <plurals name="tries_left">
+        <item quantity="one">%d try left</item>
+        <item quantity="other">%d tries left</item>
+    </plurals>
+    <string name="pin_locked">Locked for %1$s — too many wrong PINs from %2$s</string>
+    <plurals name="duration_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="duration_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <string name="action_new_pin">New PIN</string>
+    <string name="action_new_pin_description">Make a new pairing PIN</string>
+    <string name="notif_public">Android Mirror is running</string>
+
+    <string name="label_paired">Paired Macs</string>
+    <string name="paired_empty">No Mac is paired yet. Start mirroring, then connect from your Mac and enter the PIN.</string>
+    <string name="paired_unreadable">Couldn’t read the list of paired Macs.</string>
+    <string name="paired_on">Paired %1$s</string>
+    <string name="action_remove">Remove</string>
+    <string name="remove_confirm_title">Remove %1$s?</string>
+    <string name="remove_confirm_message">It will need the PIN to connect again.</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="remove_failed">Couldn’t remove %1$s. Try again.</string>
+    <string name="action_remove_description">Remove %1$s</string>
+
+    <string name="label_control">Remote control</string>
+    <string name="control_on">On</string>
+    <string name="control_off">Off</string>
+    <string name="control_on_description">Remote control on</string>
+    <string name="control_off_description">Remote control off</string>
+    <string name="control_on_detail">A paired Mac can tap, swipe, press keys and type on this phone.</string>
+    <string name="control_off_detail">Turn on Android Mirror in Accessibility settings to let a paired Mac control this phone. Until then the Mac can only watch.</string>
+    <string name="action_accessibility_settings">Open Accessibility settings</string>
+    <string name="clipboard_note">Typing into a field from the Mac used the clipboard, so what you had copied may be gone.</string>
+    <string name="input_dropped_note">Some typing from the Mac was not delivered: no text field was focused, the field was too large, or the phone was busy.</string>
+    <string name="control_restricted_help">If the switch is greyed out on Android 13 or later: open App info, tap the ⋮ menu, choose Allow restricted settings, then try again.</string>
+    <string name="action_app_info">Open App info</string>
+    <string name="settings_unavailable">Could not open Settings.</string>
+    <string name="accessibility_description">Lets a Mac you paired send taps, swipes and typing to this phone. When the Mac types, it reads the focused text field to edit it, and while it is editing a password field it filled it is told when that field changes. It does nothing unless a paired Mac is connected.</string>
+</resources>

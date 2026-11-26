@@ -1,0 +1,23 @@
+[workspace]
+resolver = "2"
+members = [
+    "shared/mirror-protocol",
+    "shared/mirror-sender",
+    "shared/mirror-receiver",
+    "shared/mirror-devtools",
+    "mac",
+    "android/core",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[workspace.dependencies]
+mirror-protocol = { path = "shared/mirror-protocol" }
+mirror-sender = { path = "shared/mirror-sender" }
+mirror-receiver = { path = "shared/mirror-receiver" }
+
+[profile.release]
+panic = "unwind"

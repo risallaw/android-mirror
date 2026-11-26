@@ -1,0 +1,15 @@
+[package]
+name = "mirror-sender"
+description = "Platform-neutral Android Mirror sender: TCP server, session handshake, backpressure, liveness"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+mirror-protocol = { workspace = true }
+log = "0.4"
+socket2 = "0.6"
+getrandom = { version = "0.4", features = ["sys_rng"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["raw_value"] }
+zeroize = { version = "1.8", features = ["serde"] }

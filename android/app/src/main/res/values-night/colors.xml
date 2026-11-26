@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_bg">#0A1128</color>
+    <color name="card_bg">#121C3A</color>
+    <color name="card_stroke">#1F2B50</color>
+    <color name="text_primary">#E8EDF7</color>
+    <color name="text_secondary">#A7B3CF</color>
+    <color name="text_tertiary">#7D89A8</color>
+
+    <color name="hero_bg">#1E3A8A</color>
+    <color name="hero_text">#FFFFFF</color>
+    <color name="hero_text_secondary">#C7D2F0</color>
+
+    <color name="start_bg">#2DD4BF</color>
+    <color name="start_text">#0F1B3D</color>
+    <color name="stop_bg">#5B1A1A</color>
+    <color name="stop_text">#FECACA</color>
+
+    <color name="status_live">#2DD4BF</color>
+
+    <color name="primary">#2DD4BF</color>
+    <color name="on_primary">#0F1B3D</color>
+    <color name="primary_container">#1E3A8A</color>
+    <color name="on_primary_container">#DCE4FF</color>
+    <color name="secondary">#5EEAD4</color>
+    <color name="secondary_container">#134E4A</color>
+    <color name="on_secondary_container">#CCFBF1</color>
+    <color name="error_text">#FCA5A5</color>
+</resources>

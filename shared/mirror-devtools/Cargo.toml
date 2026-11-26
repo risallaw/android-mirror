@@ -1,0 +1,14 @@
+[package]
+name = "mirror-devtools"
+description = "Desktop dev tools: fake H.264 file server and raw Annex-B client"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+mirror-protocol = { workspace = true }
+mirror-sender = { workspace = true }
+mirror-receiver = { workspace = true }
+crossbeam-channel = "0.5"
+ctrlc = { version = "3.4", features = ["termination"] }
+log = "0.4"

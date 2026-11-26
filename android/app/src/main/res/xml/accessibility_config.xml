@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 13+ uses xml-v33/accessibility_config.xml, which adds flagInputMethodEditor.
+     No event types: text changes are subscribed to at runtime, only while a password field we
+     filled is being edited (MirrorAccessibilityService.watchTextChanges), with no timeout so no
+     event is merged away. -->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:canPerformGestures="true"
+    android:canRetrieveWindowContent="true"
+    android:description="@string/accessibility_description"
+    android:notificationTimeout="0" />

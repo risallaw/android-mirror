@@ -1,0 +1,17 @@
+# `chacha20_force_neon`: chacha20 0.9 only uses its NEON backend on aarch64
+# when this cfg is set; without it records are sealed/opened ~30% slower
+# (measured 405 -> 527 MB/s on Apple Silicon). Pinned by the protocol test
+# `aarch64_builds_use_the_neon_chacha20_backend` (run on aarch64 macOS,
+# Android and glibc Linux). Note: a RUSTFLAGS or CARGO_ENCODED_RUSTFLAGS env var
+# replaces these flags entirely (and so drops the cfg); add it there too.
+[target.aarch64-apple-darwin]
+rustflags = ["--cfg", "chacha20_force_neon"]
+
+[target.aarch64-unknown-linux-gnu]
+rustflags = ["--cfg", "chacha20_force_neon"]
+
+[target.aarch64-linux-android]
+rustflags = ["-C", "link-arg=-Wl,-z,max-page-size=16384", "--cfg", "chacha20_force_neon"]
+
+[target.x86_64-linux-android]
+rustflags = ["-C", "link-arg=-Wl,-z,max-page-size=16384"]

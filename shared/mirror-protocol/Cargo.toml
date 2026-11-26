@@ -1,0 +1,35 @@
+[package]
+name = "mirror-protocol"
+description = "Android Mirror wire protocol v2: framing, sans-IO codec, auth, geometry, Annex-B utilities"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hmac = "0.12"
+sha2 = "0.10"
+subtle = "2.6"
+rand_core = "0.10"
+thiserror = "2"
+getrandom = "0.4"
+zeroize = { version = "1.8", features = ["zeroize_derive"] }
+hkdf = "0.12"
+x25519-dalek = { version = "2.0.1", features = ["static_secrets"] }
+spake2 = "0.4"
+chacha20poly1305 = { version = "0.10.1", default-features = false, features = ["alloc"] }
+
+[features]
+# Exposes the deterministic `with_secrets` handshake constructors used by the
+# test vectors. Never enable it in a shipping build: a reused nonce or X25519
+# secret breaks forward secrecy.
+test-vectors = []
+
+[dev-dependencies]
+# The integration tests pin the published test vectors.
+mirror-protocol = { path = ".", features = ["test-vectors"] }
+
+[lints.rust]
+# Set for aarch64 in .cargo/config.toml (chacha20's NEON backend).
+unexpected_cfgs = { level = "warn", check-cfg = ["cfg(chacha20_force_neon)"] }
