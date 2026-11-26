@@ -22,3 +22,8 @@ __pycache__/
 *.pyc
 design/icon/previews/
 *.iconset/
+
+# Rust extras
+**/*.rs.bk
+**/mutants.out*/
+rustc-ice-*.txt
